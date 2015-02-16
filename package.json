@@ -1,0 +1,27 @@
+{
+  "name": "kepler",
+  "version": "0.0.1",
+  "description": "A package for working with two-body Keplerian Orbits",
+  "author": "Jordan Stephens <jordan@stephens.io>",
+  "main": "lib/kepler.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jordanstephens/kepler.js"
+  },
+  "bugs": {
+    "url": "https://github.com/jordanstephens/kepler.js/issues"
+  },
+  "dependencies": {
+    "es6-shim": "~0.24.0",
+    "lodash": "~3.2.0",
+    "sylvester": "0.0.21"
+  },
+  "devDependencies": {
+    "chai": "~2.0.0",
+    "mocha": "~2.1.0"
+  },
+  "license": "MIT"
+}

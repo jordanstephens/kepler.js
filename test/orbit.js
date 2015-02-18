@@ -136,8 +136,31 @@ describe("Orbit", function() {
     });
 
     it("state", function() {
-      var rExpected = $V([1311.56365, 4699.59865, 4701.88142]),
-          vExpected = $V([-5.64188, 4.37964, -2.80374]);
+      var rExpected = $V([-4039.895923, 4814.560480, 3628.624702]),
+          vExpected = $V([-10.385987, -4.771921, 1.743875]);
+
+      expect(orbit.r.eql(rExpected)).to.be.true;
+      expect(orbit.v.eql(vExpected)).to.be.true;
+    });
+  });
+
+  describe("Set state with apogee and perigee", function() {
+    var orbit;
+
+    beforeEach(function() {
+      // values taken from Orbital Mechanics for Engineering Students, Example 4.7
+      orbit = Kepler.Orbit.fromParams({
+        apogee: 416,
+        perigee: 405,
+        inclination: 51.65,
+        rightAscension: 304.0847,
+        argumentOfPeriapsis: 117.7713
+      });
+    });
+
+    it("state", function() {
+      var rExpected = $V([1311.563646, 4699.598648, 4701.881415]),
+          vExpected = $V([-5.641883, 4.379639, -2.8037407]);
 
       expect(orbit.r.eql(rExpected)).to.be.true;
       expect(orbit.v.eql(vExpected)).to.be.true;

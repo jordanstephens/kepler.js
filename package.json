@@ -1,5 +1,5 @@
 {
-  "name": "kepler",
+  "name": "kepler.js",
   "version": "0.0.1",
   "description": "A package for working with two-body Keplerian Orbits",
   "author": "Jordan Stephens <jordan@stephens.io>",

@@ -38,6 +38,12 @@ describe("Orbit", function() {
       expect(actual == expected).to.be.true;
     });
 
+    it("semiminorAxis", function() {
+      var actual = Number(orbit.semiminorAxis().toFixed(5)),
+          expected = 8658.33143;
+      expect(actual).to.equal(expected);
+    });
+
     it("semilatusRectum", function() {
       var actual = orbit.semilatusRectum().toFixed(5),
           expected = 8530.48382;

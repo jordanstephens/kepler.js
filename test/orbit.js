@@ -21,9 +21,9 @@ describe("Orbit", function() {
     });
 
     it("radialVelocity", function() {
-      var actual = orbit.radialVelocity().toFixed(5),
+      var actual = orbit.radialVelocity(),
           expected = 0.55747;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("eccentricity", function() {
@@ -33,27 +33,27 @@ describe("Orbit", function() {
     });
 
     it("semimajorAxis", function() {
-      var actual = orbit.semimajorAxis().toFixed(5),
+      var actual = orbit.semimajorAxis(),
           expected = 8788.09512;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("semiminorAxis", function() {
-      var actual = Number(orbit.semiminorAxis().toFixed(5)),
+      var actual = orbit.semiminorAxis(),
           expected = 8658.33143;
-      expect(actual).to.equal(expected);
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("semilatusRectum", function() {
-      var actual = orbit.semilatusRectum().toFixed(5),
+      var actual = orbit.semilatusRectum(),
           expected = 8530.48382;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("inclination", function() {
-      var actual = orbit.inclination().toFixed(5),
+      var actual = orbit.inclination(),
           expected = 153.24923;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("nodeLine", function() {
@@ -63,39 +63,39 @@ describe("Orbit", function() {
     });
 
     it("rightAscension", function() {
-      var actual = orbit.rightAscension().toFixed(5),
+      var actual = orbit.rightAscension(),
           expected = 255.27929;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("argumentOfPeriapsis", function() {
-      var actual = orbit.argumentOfPeriapsis().toFixed(5),
+      var actual = orbit.argumentOfPeriapsis(),
           expected = 20.06832;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("trueAnomaly", function() {
-      var actual = orbit.trueAnomaly().toFixed(5),
+      var actual = orbit.trueAnomaly(),
           expected = 28.44563;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("apoapsis", function() {
-      var actual = orbit.apoapsis().toFixed(5),
+      var actual = orbit.apoapsis(),
           expected = 10292.7255;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("periapsis", function() {
-      var actual = orbit.periapsis().toFixed(5),
+      var actual = orbit.periapsis(),
           expected = 7283.46473;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("period", function() {
-      var actual = orbit.period().toFixed(5),
+      var actual = orbit.period(),
           expected = 8198.85762;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
   });
 
@@ -110,9 +110,9 @@ describe("Orbit", function() {
     });
 
     it("universalAnomaly", function() {
-      var actual = orbit.universalAnomaly(3600).toFixed(5),
+      var actual = orbit.universalAnomaly(3600),
           expected = 253.53449;
-      expect(actual == expected).to.be.true;
+      expect(expected).to.equal(toFixed(actual, 5));
     });
 
     it("update", function() {
@@ -174,3 +174,6 @@ describe("Orbit", function() {
   });
 });
 
+function toFixed(num, precision) {
+  return Number(num.toFixed(precision));
+}

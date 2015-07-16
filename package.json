@@ -18,7 +18,7 @@
     "es6-shim": "~0.24.0",
     "lodash": "~3.2.0",
     "sylvester": "0.0.21",
-    "lapack": "0.0.7"
+    "lapack": "0.1.0"
   },
   "devDependencies": {
     "chai": "~2.0.0",

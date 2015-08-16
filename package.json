@@ -16,8 +16,10 @@
   },
   "dependencies": {
     "es6-shim": "~0.24.0",
-    "lodash": "~3.2.0",
+    "es6-object-assign": "^1.0.1",
     "sylvester": "0.0.21",
+    "intersect": "^1.0.1",
+    "array-equal": "^1.0.0",
     "lapack": "0.1.0"
   },
   "devDependencies": {
